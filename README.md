@@ -1,4 +1,4 @@
-# GO-MySQL
+# GO-SQLite3
 This is very simple example to learn how GO deal with the template engine in  GO. I used *html/template* package that is already 
 built in inside of default package of GO. Connect to database SQLite3, grab the data and passing to the template, so that we can display 
 the data to the user.
