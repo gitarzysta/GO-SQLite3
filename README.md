@@ -1,6 +1,6 @@
 # GO-MySQL
 This is very simple example to learn how GO deal with the template engine in  GO. I used *html/template* package that is already 
-built in inside of default package of GO. Connect to database MySQL, grab the data and passing to the template, so that we can display 
+built in inside of default package of GO. Connect to database SQLite3, grab the data and passing to the template, so that we can display 
 the data to the user.
 
 Here's the struct of User
@@ -14,4 +14,10 @@ type user struct {
 	Password  []byte
 }
 ```
-For database driver of MySQL I used this library: *github.com/go-sql-driver/mysql*
+
+To create the table using SQLite3:
+
+```
+sqlite3 website.db 'CREATE TABLE IF NOT EXISTS users (id integer primary key, username text, first_name text, last_name text, password text);'
+```
+

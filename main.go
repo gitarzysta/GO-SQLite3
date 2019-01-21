@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	_ "github.com/go-sql-driver/mysql"
-	bcrypt "golang.org/x/crypto/bcrypt"
+	_ "github.com/mattn/go-sqlite3"
+	"golang.org/x/crypto/bcrypt"
 )
 
 var db *sql.DB
@@ -23,7 +23,7 @@ type user struct {
 }
 
 func init() {
-	db, err = sql.Open("mysql", "didiyudha:ytrewq@/blog")
+	db, err = sql.Open("sqlite3", "website.db")
 	checkErr(err)
 	err = db.Ping()
 	checkErr(err)
